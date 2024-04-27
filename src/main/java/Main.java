@@ -28,9 +28,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Вас приветствует калькулятор счёта");
         askPeopleCnt();
-        System.out.println("Данные приняты, делим счёт на "+peopleCnt+" человек");
+        System.out.println("Данные приняты, делим счёт на "+peopleCnt+" человек(а)");
         Calculator calc = new Calculator();
         calc.printList();
+        PriceFormatter formatter = new PriceFormatter(calc.totalAmount / peopleCnt);
+        System.out.println("Каждый человек должен заплатить "+formatter.getFormattedPrice()+"\n");
         System.out.println("Спасибо за использование калькулятора. Приходите ещё.");
     }
 }
