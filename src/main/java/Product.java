@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public class Product {
     /**
      * Стоимость товара
