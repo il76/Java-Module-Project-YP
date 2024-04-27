@@ -12,7 +12,7 @@ public class Calculator {
         while (true) {
             System.out.println("Введите название товара или команду \"Завершить\" для окончания ввода");
             String userInput = scanner.next();
-            if (userInput.toLowerCase().equals("завершить")) {
+            if (userInput.equalsIgnoreCase("завершить")) {
                 break;
             } else {
                 Product product = new Product(userInput);
