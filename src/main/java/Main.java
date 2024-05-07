@@ -30,6 +30,7 @@ public class Main {
         askPeopleCnt();
         System.out.println("Данные приняты, делим счёт на "+peopleCnt+" человек(а)");
         Calculator calc = new Calculator();
+        calc.getData();
         calc.printList();
         PriceFormatter formatter = new PriceFormatter(calc.totalAmount / peopleCnt);
         System.out.println("Каждый человек должен заплатить "+formatter.getFormattedPrice()+"\n");

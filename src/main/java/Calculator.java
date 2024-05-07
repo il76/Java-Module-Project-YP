@@ -7,13 +7,13 @@ public class Calculator {
     ArrayList<Product> productList = new ArrayList<>();
     double totalAmount;
 
-    public Calculator() {
-        Scanner scanner = new Scanner(System.in);
+    public void getData() {
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);
         // без этой строки не принимает значения вида "Тест 2". Вот только в Windows НЕ работает
         // scanner.useDelimiter(System.lineSeparator());
         // нужно так, что в linux, что в windows - привет особенностям реализации консоли ввода
         scanner.useDelimiter("\n");
-        scanner.useLocale(Locale.ENGLISH); //десятичная точка вместо запятой
+        // scanner.useLocale(Locale.ENGLISH); //десятичная точка вместо запятой
         System.out.println("Введите список товаров");
         while (true) {
             System.out.println("Введите название товара или команду \"Завершить\" для окончания ввода");
@@ -48,6 +48,10 @@ public class Calculator {
                 }
             }
         }
+    }
+
+    public Calculator() {
+
     }
 
     /**
